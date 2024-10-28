@@ -1,4 +1,4 @@
-document.querySelector('#note-form').addEventListener('submit', function(event) {
+window.document.querySelector('#note-form').addEventListener('submit', function(event) {
 
     event.preventDefault(); 
 
@@ -10,11 +10,11 @@ document.querySelector('#note-form').addEventListener('submit', function(event) 
     const note = document.createElement('div');
     note.classList.add('note');
 
-    note.innerText = `
-        <h3>${title}</h3>
-        <p>${content}</p>
-        <p><strong>Priority:</strong> ${priority.charAt(0).toUpperCase() + priority.slice(1)}</p>
-    `;
+    note.innerText = 
+    `${title}
+    Content: ${content} 
+    Priority: ${priority.charAt(0).toUpperCase() + priority.slice(1)}`;
+
     //añadir las notas.
     document.getElementById('notes-container').appendChild(note);
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../02_dom-manipulation--form/images/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>02 DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 class="main-title">AppNote</h1>
+
+    <h2 class="form-title">New Note Form</h2>
+    <form class="note-form" id="note-form">
+
+      <div class="form-group">
+        <label for="note-title"><b>Title:</b></label>
+        <input type="text" id="note-title" name="title" placeholder="Enter note title" required />
+      </div>
+    
+      <div class="form-group">
+        <label for="note-content"><b>Content:</b></label>
+        <input type="text" id="note-content" name="content" placeholder="Enter note content" required>
+      </div>
+
+      <div class="form-group">
+        <label for="note-priority"><b>Priority:</b></label>
+        <select id="note-priority" name="priority">
+          <option value="" disabled selected>Select a priority</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+        <button type="submit" id="note-button">Add Note</button>
+    </form>
+
+    <h2 class="form-title">Note List</h2>
+    <div id="notes-container">
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
